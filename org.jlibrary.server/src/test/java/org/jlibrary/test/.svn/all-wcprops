@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/jlibrary/!svn/ver/836/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test
+END
+CreateRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/CreateRepositoryTest.java
+END
+AbstractRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/AbstractRepositoryTest.java
+END
+LoginTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/LoginTest.java
+END
+JLibraryTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/JLibraryTestSuite.java
+END
+FindRepositoriesTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/FindRepositoriesTest.java
+END
+DisconnectTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/DisconnectTest.java
+END
+RemoveRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/RemoveRepositoryTest.java
+END

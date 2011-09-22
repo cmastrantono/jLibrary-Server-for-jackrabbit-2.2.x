@@ -1,0 +1,7 @@
+* Added support for custom properties
+* Added partial xfire support
+* The method createDirectory(Ticket,String,String,String) has been deprecated and replaced by 
+  createDirectory(Ticket,DirectoryProperties)
+* An UserNotFoundException is thrown when you try to remove an user that was previously removed.
+* The method entrySet in GenericProperties returns a new HashSet each time.
+* Replaced all printStackTrace by error logger calls.

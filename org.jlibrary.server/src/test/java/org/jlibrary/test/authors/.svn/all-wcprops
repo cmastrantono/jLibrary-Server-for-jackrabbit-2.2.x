@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/authors
+END
+RemoveAuthorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/authors/RemoveAuthorTest.java
+END
+FindAuthorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/authors/FindAuthorTest.java
+END
+AbstractAuthorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/authors/AbstractAuthorTest.java
+END
+CreateAuthorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/authors/CreateAuthorTest.java
+END

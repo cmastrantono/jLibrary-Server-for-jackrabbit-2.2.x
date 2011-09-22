@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/profiles
+END
+LocalServerProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/profiles/LocalServerProfile.java
+END
+RemoteServerProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/profiles/RemoteServerProfile.java
+END

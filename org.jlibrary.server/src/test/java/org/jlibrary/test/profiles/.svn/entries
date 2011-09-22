@@ -1,0 +1,52 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/profiles
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2007-01-21T20:37:52.364217Z
+91
+perez_martin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+LocalProfileTestFactory.java
+file
+
+
+
+
+2008-02-26T15:06:37.437500Z
+eda0f247ab237721684751fbd822b150
+2007-01-21T20:37:52.364217Z
+91
+perez_martin
+
+ProfileTestFactory.java
+file
+
+
+
+
+2008-02-26T15:06:37.453125Z
+5c9f878f29e0e7bd75f93244ef9c0a1b
+2007-01-21T20:37:52.364217Z
+91
+perez_martin
+

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception
+END
+RepositoryAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/RepositoryAlreadyExistsException.java
+END
+NodeNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/NodeNotFoundException.java
+END
+AuthorAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/AuthorAlreadyExistsException.java
+END
+RecentlyRemovedRepositoryException.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/RecentlyRemovedRepositoryException.java
+END
+CategoryNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/CategoryNotFoundException.java
+END
+RepositoryNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/RepositoryNotFoundException.java
+END
+AuthorNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/AuthorNotFoundException.java
+END
+CategoryAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/CategoryAlreadyExistsException.java
+END
+RepositoryException.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/repository/exception/RepositoryException.java
+END

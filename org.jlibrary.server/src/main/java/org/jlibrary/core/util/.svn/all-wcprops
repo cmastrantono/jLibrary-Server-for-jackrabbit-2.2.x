@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/jlibrary/!svn/ver/624/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util
+END
+FileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/FileUtils.java
+END
+UtilCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/UtilCache.java
+END
+ByteUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/ByteUtils.java
+END
+SerializeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/SerializeException.java
+END
+FlexibleProperties.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/624/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/FlexibleProperties.java
+END
+AbstractConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/AbstractConfiguration.java
+END
+UUIDGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/UUIDGenerator.java
+END
+ResourceLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/ResourceLoader.java
+END

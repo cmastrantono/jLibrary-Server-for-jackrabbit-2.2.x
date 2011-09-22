@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/jlibrary/!svn/ver/431/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility
+END
+CompatibilityFilter1_0.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/CompatibilityFilter1_0.java
+END
+Beta4Migrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/Beta4Migrator.java
+END
+Migrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/Migrator.java
+END
+JLibrary101Migrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/JLibrary101Migrator.java
+END
+JLibrary11Migrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/JLibrary11Migrator.java
+END
+CompatibilityParser1_0.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/CompatibilityParser1_0.java
+END
+VersionChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/jlibrary/!svn/ver/431/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/compatibility/VersionChecker.java
+END

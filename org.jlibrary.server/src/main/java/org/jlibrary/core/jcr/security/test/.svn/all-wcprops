@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/jlibrary/!svn/ver/624/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/test
+END
+users.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/test/users.xml
+END
+PropertiesTestSynchronizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/jlibrary/!svn/ver/624/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/test/PropertiesTestSynchronizer.java
+END
+groups.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/test/groups.xml
+END

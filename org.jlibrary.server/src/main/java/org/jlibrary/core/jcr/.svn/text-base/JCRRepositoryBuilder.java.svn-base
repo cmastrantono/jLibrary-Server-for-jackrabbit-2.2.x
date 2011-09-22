@@ -1,0 +1,421 @@
+/*
+* jLibrary, Open Source Document Management System
+* 
+* Copyright (c) 2003-2006, Mart�n P�rez Mari��n, and individual 
+* contributors as indicated by the @authors tag. See copyright.txt in the
+* distribution for a full listing of individual contributors.
+* All rights reserved.
+* 
+* This is free software; you can redistribute it and/or modify it
+* under the terms of the Modified BSD License as published by the Free 
+* Software Foundation.
+* 
+* This software is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified
+* BSD License for more details.
+* 
+* You should have received a copy of the Modified BSD License along with 
+* this software; if not, write to the Free Software Foundation, Inc., 
+* 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA, or see the
+* FSF site: http://www.fsf.org.
+*/
+package org.jlibrary.core.jcr;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.jcr.AccessDeniedException;
+import javax.jcr.InvalidItemStateException;
+import javax.jcr.ItemExistsException;
+import javax.jcr.NodeIterator;
+import javax.jcr.Session;
+import javax.jcr.SimpleCredentials;
+import javax.jcr.Value;
+import javax.jcr.lock.LockException;
+import javax.jcr.nodetype.ConstraintViolationException;
+import javax.jcr.nodetype.NoSuchNodeTypeException;
+import javax.jcr.version.VersionException;
+
+import org.apache.jackrabbit.core.WorkspaceImpl;
+import org.apache.jackrabbit.core.config.ConfigurationException;
+import org.apache.jackrabbit.core.nodetype.InvalidNodeTypeDefException;
+import org.apache.jackrabbit.name.QName;
+import org.apache.jackrabbit.spi.Name;
+import org.apache.jackrabbit.spi.commons.name.NameFactoryImpl;
+import org.jlibrary.core.entities.Author;
+import org.jlibrary.core.entities.Category;
+import org.jlibrary.core.entities.Node;
+import org.jlibrary.core.entities.Repository;
+import org.jlibrary.core.entities.Ticket;
+import org.jlibrary.core.entities.Types;
+import org.jlibrary.core.entities.User;
+import org.jlibrary.core.jcr.modules.JCRImportExportModule;
+import org.jlibrary.core.jcr.nodetypes.NodeTypeManager;
+import org.jlibrary.core.properties.CustomPropertyDefinition;
+import org.jlibrary.core.properties.InvalidPropertyTypeException;
+import org.jlibrary.core.properties.PropertyNotFoundException;
+import org.jlibrary.core.properties.RepositoryProperties;
+import org.jlibrary.core.repository.exception.RecentlyRemovedRepositoryException;
+import org.jlibrary.core.repository.exception.RepositoryAlreadyExistsException;
+import org.jlibrary.core.repository.exception.RepositoryException;
+import org.jlibrary.core.security.SecurityException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * Contains the logic to build a jLibrary repository.
+ * 
+ * @author mpermar
+ *
+ */
+public class JCRRepositoryBuilder {
+
+	static Logger logger = LoggerFactory.getLogger(JCRRepositoryBuilder.class);
+	
+	private JCRImportExportModule importExportModule;
+	private NodeTypeManager nodetypeManager = new NodeTypeManager();
+	
+	public JCRRepositoryBuilder() {
+		
+		importExportModule = new JCRImportExportModule();
+	}
+	
+	public Repository createRepository(Ticket ticket, 
+									   String name, 
+									   String description, 
+									   User creator) 
+											throws RepositoryAlreadyExistsException,
+												   RepositoryException, 
+												   SecurityException {
+
+		try {
+			if (!creator.isAdmin()) {
+				throw new SecurityException(
+						SecurityException.NOT_ENOUGH_PERMISSIONS);
+			}
+
+			javax.jcr.Session systemSession = SessionManager.getInstance().getSystemSession();			
+			WorkspaceImpl workspace = 
+				importExportModule.checkWorkspaceExists(name,systemSession); 
+
+			// Change the name to lowercase
+			String workspaceName = name.toLowerCase();
+			logger.info("Trying to create workspace '"+workspaceName+"'");			
+			workspace.createWorkspace(workspaceName);
+			logger.info("Workspace created successfully.");
+			
+			javax.jcr.Repository repository = 
+				SessionManager.getInstance().getRepository(); 
+			SimpleCredentials creds =
+                new SimpleCredentials("username", "password".toCharArray());
+			
+			logger.info("Trying to login into the repository.");
+			javax.jcr.Session session = repository.login(creds,workspaceName);
+			logger.info("Login successful.");
+			SessionManager.getInstance().attach(ticket, session);
+			logger.info("Ticket session attached.");
+			javax.jcr.Node node = buildRepository(ticket,
+												  session,
+												  name,
+												  description,
+												  creator);
+
+			logger.info("Repository built successfully. Returning repository instance.");
+			return JCRAdapter.createRepository(ticket,name,node);
+		} catch (ConfigurationException ce) {
+			//TODO: Remove this catch block when Jackrabbit supports workspace deletes
+			throw new RecentlyRemovedRepositoryException();
+		} catch (RepositoryAlreadyExistsException raee) {
+			throw raee;
+		} catch (SecurityException se) {
+			throw se;
+		} catch (RepositoryException re) {
+			throw re;
+		} catch (Exception e) {
+			logger.error(e.getMessage(),e);
+			throw new RepositoryException(e);
+		}
+	}	
+	
+	public javax.jcr.Node buildRepository(Ticket ticket,
+										  Session session, 
+										  String name,
+										  String description,
+										  User creator) 
+										throws javax.jcr.RepositoryException, 
+											   NoSuchNodeTypeException, 
+											   VersionException, 
+											   ConstraintViolationException, 
+											   LockException, 
+											   AccessDeniedException, 
+											   ItemExistsException, 
+											   InvalidItemStateException, 
+											   PropertyNotFoundException, 
+											   InvalidPropertyTypeException,
+											   InvalidNodeTypeDefException,
+											   SecurityException {
+		
+		logger.info("Building repository structure...");			
+		Calendar date = Calendar.getInstance();
+		date.setTime(new Date());
+		
+		javax.jcr.Node rootNode = session.getRootNode();
+		
+		logger.info("Creating base nodes...");			
+		javax.jcr.Node systemNode =  
+			rootNode.addNode(JLibraryConstants.JLIBRARY_SYSTEM,
+							      JLibraryConstants.INTERNAL_MIXIN);		
+		systemNode.addMixin(JCRConstants.JCR_REFERENCEABLE);
+		systemNode.setProperty(JLibraryConstants.JLIBRARY_VERSION, 
+				 			   JLibraryConstants.VERSION_1_1);
+		systemNode.addNode(JLibraryConstants.JLIBRARY_CONFIG,
+						   JLibraryConstants.INTERNAL_MIXIN);
+		systemNode.addNode(JLibraryConstants.JLIBRARY_CUSTOM_PROPERTIES,
+				   JLibraryConstants.INTERNAL_MIXIN);
+		
+		logger.info("Creating root node...");			
+		javax.jcr.Node node = 
+			rootNode.addNode(JLibraryConstants.JLIBRARY_ROOT,
+							 JCRConstants.JCR_FOLDER);
+		node.addMixin(JCRConstants.JCR_REFERENCEABLE);
+		node.addMixin(JLibraryConstants.DIRECTORY_MIXIN);
+		
+		node.setProperty(JLibraryConstants.JLIBRARY_NAME,name);
+		node.setProperty(JLibraryConstants.JLIBRARY_DESCRIPTION,description);
+		node.setProperty(JLibraryConstants.JLIBRARY_CREATOR,creator.getId());
+		node.setProperty(JLibraryConstants.JLIBRARY_CREATED,date);
+		node.setProperty(JLibraryConstants.JLIBRARY_PATH,"/");
+		node.setProperty(JLibraryConstants.JLIBRARY_POSITION,0);
+		node.setProperty(JLibraryConstants.JLIBRARY_SIZE,0);
+		node.setProperty(JLibraryConstants.JLIBRARY_TYPECODE,
+											Types.FOLDER.longValue());
+		node.setProperty(JLibraryConstants.JLIBRARY_IMPORTANCE,
+											Node.IMPORTANCE_HIGHEST.longValue());
+		node.setProperty(JLibraryConstants.JLIBRARY_RESTRICTIONS, new Value[]{});
+
+		session.save();
+
+		// Create config entries
+		JCRUtils.setConfigEntry(session,
+								RepositoryProperties.EXTRACT_DOCUMENT_METADATA,
+								Boolean.TRUE);
+		JCRUtils.setConfigEntry(session,
+								RepositoryProperties.PHYSICAL_DELETE_DOCUMENTS,
+								Boolean.TRUE);
+		JCRUtils.setConfigEntry(session,
+								RepositoryProperties.DO_LAZY_LOADING,
+								Boolean.TRUE);
+		
+		// Create security structure
+		new JCRSecurityService().buildWorkspaceSecurity(session);				
+		session.save();
+		
+		logger.info("Building categories structure...");			
+		javax.jcr.Node categoriesNode = 
+			systemNode.addNode(JLibraryConstants.JLIBRARY_CATEGORIES,
+							   JLibraryConstants.INTERNAL_MIXIN);
+		
+		// Check authors subnode
+		javax.jcr.Node authorsNode = 
+			systemNode.addNode(JLibraryConstants.JLIBRARY_AUTHORS,
+							   JLibraryConstants.INTERNAL_MIXIN);			
+
+		logger.info("Building authors structure...");			
+		javax.jcr.Node unknownAuthorNode = 
+			authorsNode.addNode(
+					JLibraryConstants.JLIBRARY_AUTHOR,
+					JLibraryConstants.AUTHOR_MIXIN);
+		
+		unknownAuthorNode.addMixin(JCRConstants.JCR_REFERENCEABLE);
+		
+		unknownAuthorNode.setProperty(JLibraryConstants.JLIBRARY_NAME,
+				   					  Author.UNKNOWN.getName());
+		unknownAuthorNode.setProperty(JLibraryConstants.JLIBRARY_AUTHOR_BIO,
+				   					  Author.UNKNOWN.getBio());
+		
+		systemNode.setProperty(JLibraryConstants.JLIBRARY_UNKNOWN_AUTHOR,
+							   unknownAuthorNode);
+				
+		javax.jcr.Node userNode = 
+			JCRSecurityService.getUserNode(session,
+										   ticket.getUser().getId());
+		JCRUtils.addNodeToProperty(userNode,
+								   node,
+								   JLibraryConstants.JLIBRARY_RESTRICTIONS);
+				
+		// Every reader will be able to access to new created repositories
+		javax.jcr.Node readersGroup = JCRSecurityService.findReadersGroup(session);
+		JCRUtils.addNodeToProperty(readersGroup,
+				   				   node,
+				   				   JLibraryConstants.JLIBRARY_RESTRICTIONS);		
+		
+		javax.jcr.Node unknownCategoryNode = 
+			categoriesNode.addNode(
+					JLibraryConstants.JLIBRARY_CATEGORY,
+					JLibraryConstants.CATEGORY_MIXIN);
+		
+		unknownCategoryNode.addMixin(JCRConstants.JCR_REFERENCEABLE);
+
+		unknownCategoryNode.setProperty(
+				JLibraryConstants.JLIBRARY_NAME,Category.UNKNOWN_NAME);
+		unknownCategoryNode.setProperty(
+				JLibraryConstants.JLIBRARY_DESCRIPTION,
+				Category.UNKNOWN_DESCRIPTION);
+		unknownCategoryNode.setProperty(
+				JLibraryConstants.JLIBRARY_DATE,date);
+		unknownCategoryNode.setProperty(JLibraryConstants.JLIBRARY_NODES,
+										new Value[]{});
+		systemNode.setProperty(JLibraryConstants.JLIBRARY_UNKNOWN_CATEGORY,
+				   			   unknownCategoryNode);
+					
+		session.save();
+		return node;
+	}	
+		
+	public void registerCustomProperty(Ticket ticket, 
+									   CustomPropertyDefinition property) throws RepositoryException {
+		
+		javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+		if (session == null) {
+			throw new RepositoryException("Session has expired. Please log in again.");
+		}
+		try {
+			nodetypeManager.registerCustomProperty(session, property);
+			addPropertyToRepository(session,property);
+			session.save();
+		} catch (javax.jcr.RepositoryException e) {
+			logger.error(e.getMessage(),e);
+			throw new RepositoryException(e);
+		}
+	}
+	
+	private void addPropertyToRepository(
+			javax.jcr.Session session, 
+			CustomPropertyDefinition property) throws javax.jcr.RepositoryException {
+
+		javax.jcr.Node systemNode = JCRUtils.getSystemNode(session);		
+		javax.jcr.Node propertiesNode = 
+			systemNode.getNode(JLibraryConstants.JLIBRARY_CUSTOM_PROPERTIES);
+		
+		NodeIterator it = propertiesNode.getNodes();
+		while (it.hasNext()) {
+			javax.jcr.Node propsNode = (javax.jcr.Node) it.next();
+			String propName = propsNode.getProperty(
+							JLibraryConstants.JLIBRARY_PROPERTY_NAME).getString();
+			if (propName.equals(property.getName())) {				
+				// Already in the repository
+				return;
+			}
+		}		
+		
+		// Not found, create a new config entry
+		javax.jcr.Node propNode = 
+			propertiesNode.addNode(JLibraryConstants.JLIBRARY_CUSTOM_PROPERTY,
+							   	   JLibraryConstants.INTERNAL_MIXIN);
+		propNode.setProperty(JLibraryConstants.JLIBRARY_PROPERTY_NAME,
+							 property.getName());
+		propNode.setProperty(JLibraryConstants.JLIBRARY_PROPERTY_TYPE,
+							 property.getType());		
+		propNode.setProperty(JLibraryConstants.JLIBRARY_PROPERTY_MULTIVALUED,
+				 			 property.isMultivalued());		
+		propNode.setProperty(JLibraryConstants.JLIBRARY_PROPERTY_AUTOCREATED,
+				 			 property.isAutocreated());
+		if (property.getDefaultValues() != null) {
+			propNode.setProperty(JLibraryConstants.JLIBRARY_PROPERTY_DEFAULT,
+					 			 JCRUtils.getValues(property.getDefaultValues()));
+		}
+	}
+
+	public void unregisterCustomProperty(Ticket ticket, 
+			   							 CustomPropertyDefinition property) throws RepositoryException {
+
+		javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+		if (session == null) {
+			throw new RepositoryException("Session has expired. Please log in again.");
+		}
+		try {
+			if (property.getQName() != null) {
+				nodetypeManager.unregisterCustomProperty(session, property.getQName());
+			} else {
+				nodetypeManager.unregisterCustomProperty(session, property.getName());				
+			}
+			removePropertyFromRepository(session, property.getName());
+		} catch (javax.jcr.RepositoryException e) {
+			logger.error(e.getMessage(),e);
+			throw new RepositoryException(e);
+		}
+	}
+	
+	
+	private void removePropertyFromRepository(
+			javax.jcr.Session session, 
+			String propertyName) throws javax.jcr.RepositoryException {
+
+		javax.jcr.Node systemNode = JCRUtils.getSystemNode(session);		
+		javax.jcr.Node propertiesNode = 
+			systemNode.getNode(JLibraryConstants.JLIBRARY_CUSTOM_PROPERTIES);
+		
+		javax.jcr.Node propertyNode = null;
+		NodeIterator it = propertiesNode.getNodes();
+		while (it.hasNext()) {
+			javax.jcr.Node propsNode = (javax.jcr.Node) it.next();
+			String propName = propsNode.getProperty(
+							JLibraryConstants.JLIBRARY_PROPERTY_NAME).getString();
+			if (propName.equals(propertyName)) {				
+				propertyNode = propsNode;
+				break;
+			}
+		}		
+		propertyNode.remove();
+	}	
+	
+	public boolean isPropertyRegistered(Ticket ticket, 
+										String uri, 
+										String propertyName) throws RepositoryException {
+
+		javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+		if (session == null) {
+			throw new RepositoryException("Session has expired. Please log in again.");
+		}
+		try {
+			if (uri != null) {
+				Name name = NameFactoryImpl.getInstance().create(uri,propertyName);
+				return nodetypeManager.isCustomPropertyRegistered(session, name);
+			}
+			return nodetypeManager.isCustomPropertyRegistered(session, propertyName);
+		} catch (javax.jcr.RepositoryException e) {
+			logger.error(e.getMessage(),e);
+			throw new RepositoryException(e);
+		}
+	}
+	
+	
+	public boolean isPropertyInRepository(Ticket ticket, String propertyName) throws RepositoryException {
+
+		try {
+			javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+			if (session == null) {
+				throw new RepositoryException("Session has expired. Please log in again.");
+			}
+			
+			javax.jcr.Node systemNode = JCRUtils.getSystemNode(session);		
+			javax.jcr.Node propertiesNode = 
+				systemNode.getNode(JLibraryConstants.JLIBRARY_CUSTOM_PROPERTIES);
+
+			NodeIterator it = propertiesNode.getNodes();
+			while (it.hasNext()) {
+				javax.jcr.Node propsNode = (javax.jcr.Node) it.next();
+				String propName = propsNode.getProperty(
+								JLibraryConstants.JLIBRARY_PROPERTY_NAME).getString();
+				if (propName.equals(propertyName)) {				
+					return true;
+				}
+			}		
+			return false;
+		} catch (javax.jcr.RepositoryException e) {
+			logger.error(e.getMessage(),e);
+			throw new RepositoryException(e);
+		}			
+	}	
+}

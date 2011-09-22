@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/favorites
+END
+DeleteFavoriteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/favorites/DeleteFavoriteTest.java
+END
+AbstractFavoriteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/favorites/AbstractFavoriteTest.java
+END
+CreateFavoriteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/favorites/CreateFavoriteTest.java
+END

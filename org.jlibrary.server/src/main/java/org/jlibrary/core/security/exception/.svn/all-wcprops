@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception
+END
+UserAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/UserAlreadyExistsException.java
+END
+RoleAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/RoleAlreadyExistsException.java
+END
+GroupNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/GroupNotFoundException.java
+END
+UserNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/UserNotFoundException.java
+END
+GroupAlreadyExistsException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/GroupAlreadyExistsException.java
+END
+RoleNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/RoleNotFoundException.java
+END
+AuthenticationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/security/exception/AuthenticationException.java
+END

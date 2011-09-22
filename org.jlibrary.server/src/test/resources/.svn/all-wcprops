@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/jlibrary/!svn/ver/514/trunk/org.jlibrary.server/src/test/resources
+END
+jlibrary.cnd
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/jlibrary/!svn/ver/432/trunk/org.jlibrary.server/src/test/resources/jlibrary.cnd
+END
+factory.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/resources/factory.properties
+END
+namespaces.cnd
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/jlibrary/!svn/ver/436/trunk/org.jlibrary.server/src/test/resources/namespaces.cnd
+END
+jlibrary.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/resources/jlibrary.properties
+END
+factory-local.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/resources/factory-local.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/resources/log4j.properties
+END
+test.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/jlibrary/!svn/ver/432/trunk/org.jlibrary.server/src/test/resources/test.properties
+END
+repository.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/jlibrary/!svn/ver/514/trunk/org.jlibrary.server/src/test/resources/repository.xml
+END

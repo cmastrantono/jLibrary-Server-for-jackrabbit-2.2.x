@@ -1,0 +1,16 @@
+test.server.profile.factory=org.jlibrary.test.profiles.LocalProfileTestFactory
+test.repository.name=temp
+test.user.name=testUser
+test.group.name=testGroup
+test.import.name=importedTemp
+
+# This will test namespace creation and custom properties
+test.custom.property=testProperty
+test.custom.property.prefix=jcg
+test.custom.property.uri=http://www.javaconganas.com
+test.cnd.property.name=wikiEntry
+test.cnd.property.uri=http://www.javaconganas.com
+
+test.export.destination=./target
+#Path for documents that will test supported size
+test.documents.path=c:/temp/documents

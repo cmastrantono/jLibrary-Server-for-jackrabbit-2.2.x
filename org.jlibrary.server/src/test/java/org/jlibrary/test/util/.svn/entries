@@ -1,0 +1,52 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/util
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2007-04-28T10:58:40.640075Z
+241
+perez_martin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+ByteUtilsTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.140625Z
+022caf83244f04cc99b925f40b10b5b8
+2007-03-01T23:06:11.243816Z
+207
+perez_martin
+
+MockHelper.java
+file
+
+
+
+
+2008-02-26T15:06:42.171875Z
+cf06bbe30ea043294a9044c98a28ffd3
+2007-04-28T10:58:40.640075Z
+241
+perez_martin
+

@@ -1,0 +1,52 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/config
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2007-10-21T21:18:56.530569Z
+623
+usultis
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+ConfigException.java
+file
+
+
+
+
+2008-02-26T15:06:46.375000Z
+e97c1f2a81283123a8475f98a7ac9cd9
+2006-12-28T14:16:18.239904Z
+4
+perez_martin
+
+JLibraryProperties.java
+file
+
+
+
+
+2008-02-26T15:06:46.421875Z
+c83fec61148c35f13bd59ad68a276c6d
+2007-10-21T21:18:56.530569Z
+623
+usultis
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/jlibrary/!svn/ver/624/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security
+END
+SynchronizerTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/SynchronizerTemplate.java
+END
+Synchronizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/Synchronizer.java
+END
+CommandLineSynchronizerRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/security/CommandLineSynchronizerRunner.java
+END

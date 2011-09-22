@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/relations
+END
+AbstractRelationsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/relations/AbstractRelationsTest.java
+END
+AddRelationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/relations/AddRelationTest.java
+END
+RemoveRelationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/relations/RemoveRelationTest.java
+END

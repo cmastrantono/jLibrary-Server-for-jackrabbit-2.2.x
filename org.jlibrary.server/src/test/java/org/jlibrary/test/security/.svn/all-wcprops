@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/jlibrary/!svn/ver/800/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security
+END
+UpdateGroupTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/UpdateGroupTest.java
+END
+CreateUserTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/CreateUserTest.java
+END
+FindRoleTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/FindRoleTest.java
+END
+UpdateRoleTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/UpdateRoleTest.java
+END
+AddRoleTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/800/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/AddRoleTest.java
+END
+RemoveGroupTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/RemoveGroupTest.java
+END
+AddRestrictionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/AddRestrictionTest.java
+END
+FindUserTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/FindUserTest.java
+END
+RemoveRoleTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/800/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/RemoveRoleTest.java
+END
+CreateGroupTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/CreateGroupTest.java
+END
+UpdateUserTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/UpdateUserTest.java
+END
+RemoveRestrictionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/RemoveRestrictionTest.java
+END
+CreateRoleTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/CreateRoleTest.java
+END
+RemoveUserTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/RemoveUserTest.java
+END
+FindGroupTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/FindGroupTest.java
+END
+FindRolTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/security/FindRolTest.java
+END

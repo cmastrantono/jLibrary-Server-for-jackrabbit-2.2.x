@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip
+END
+UnixStat.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/UnixStat.java
+END
+ZipOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipOutputStream.java
+END
+ZipFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipFile.java
+END
+ZipLong.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipLong.java
+END
+ZipShort.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipShort.java
+END
+AsiExtraField.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/AsiExtraField.java
+END
+UnrecognizedExtraField.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/UnrecognizedExtraField.java
+END
+ZipEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipEntry.java
+END
+ExtraFieldUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ExtraFieldUtils.java
+END
+ZipExtraField.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/util/zip/ZipExtraField.java
+END

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Sample users</comment>
+<entry key="user1">mpermar,Martin,Perez,mpermar@gmail.com,true</entry>
+<entry key="user2">kev56,Kevin,Richards,kevinr@nospam.com,false</entry>
+<entry key="user3">rambo,Peter,Miller,peter@nospam.com,false</entry>
+<entry key="user4">gwan,Goldwyn,Lambert,gwan@nospam.com,false</entry>
+<entry key="user5">donald,Don,Hanks,donald@nospam.com,false</entry>
+</properties>

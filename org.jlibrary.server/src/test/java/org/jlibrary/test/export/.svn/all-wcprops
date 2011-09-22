@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/export
+END
+AbstractExportImportTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/export/AbstractExportImportTest.java
+END
+ExportRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/export/ExportRepositoryTest.java
+END
+ImportRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/export/ImportRepositoryTest.java
+END

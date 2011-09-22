@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/jlibrary/!svn/ver/623/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/factory
+END
+LocalServicesFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/623/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/factory/LocalServicesFactory.java
+END
+JLibraryServiceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/jlibrary/!svn/ver/623/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/factory/JLibraryServiceFactory.java
+END
+ServicesFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/factory/ServicesFactory.java
+END

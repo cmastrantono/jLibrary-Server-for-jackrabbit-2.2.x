@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/locking
+END
+LockDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/locking/LockDocumentTest.java
+END
+AbstractLockingTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/locking/AbstractLockingTest.java
+END
+UnlockDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/locking/UnlockDocumentTest.java
+END

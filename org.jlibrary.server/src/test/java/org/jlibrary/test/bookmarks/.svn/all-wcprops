@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/bookmarks
+END
+RemoveBookmarkTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/bookmarks/RemoveBookmarkTest.java
+END
+UpdateBookmarkTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/bookmarks/UpdateBookmarkTest.java
+END
+AbstractBookmarkTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/bookmarks/AbstractBookmarkTest.java
+END
+CreateBookmarkTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/bookmarks/CreateBookmarkTest.java
+END

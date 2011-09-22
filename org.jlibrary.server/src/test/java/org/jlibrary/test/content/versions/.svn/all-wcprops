@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/versions
+END
+CreateVersionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/versions/CreateVersionTest.java
+END
+FindVersionsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/versions/FindVersionsTest.java
+END

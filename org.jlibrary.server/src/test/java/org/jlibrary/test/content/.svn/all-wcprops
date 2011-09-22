@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/jlibrary/!svn/ver/800/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content
+END
+MoveContentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/MoveContentTest.java
+END
+CreateDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/CreateDocumentTest.java
+END
+CopyContentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/CopyContentTest.java
+END
+FindDirectoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/FindDirectoryTest.java
+END
+RemoveResourceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/RemoveResourceTest.java
+END
+UpdateDirectoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/UpdateDirectoryTest.java
+END
+CreateResourceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/CreateResourceTest.java
+END
+FindDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/FindDocumentTest.java
+END
+UpdateDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/UpdateDocumentTest.java
+END
+UpdateRepositoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/jlibrary/!svn/ver/800/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/UpdateRepositoryTest.java
+END
+RemoveDirectoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/RemoveDirectoryTest.java
+END
+ManageResourcesTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/ManageResourcesTest.java
+END
+BinaryContentTransferTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/BinaryContentTransferTest.java
+END
+FindNodeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/FindNodeTest.java
+END
+CreateDirectoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/CreateDirectoryTest.java
+END
+UpdateResourceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/UpdateResourceTest.java
+END
+RemoveDocumentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/RemoveDocumentTest.java
+END
+NodeChildrenTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/NodeChildrenTest.java
+END
+AbstractContentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/content/AbstractContentTest.java
+END

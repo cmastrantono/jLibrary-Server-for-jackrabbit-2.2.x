@@ -1,0 +1,52 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/profiles
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2007-06-03T16:03:40.048544Z
+327
+perez_martin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+LocalServerProfile.java
+file
+
+
+
+
+2008-02-26T15:06:44.203125Z
+9fa811ebeb3d0ad143fd5a64b689ccff
+2007-05-26T08:32:45.485259Z
+303
+perez_martin
+
+RemoteServerProfile.java
+file
+
+
+
+
+2008-02-26T15:06:44.218750Z
+567d140a35703836f2a08aeb2ac6cfc3
+2007-06-03T16:03:40.048544Z
+327
+perez_martin
+

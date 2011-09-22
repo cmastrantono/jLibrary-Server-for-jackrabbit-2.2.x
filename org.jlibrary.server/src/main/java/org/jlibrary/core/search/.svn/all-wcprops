@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/jlibrary/!svn/ver/526/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/search
+END
+SearchResultSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/search/SearchResultSet.java
+END
+SearchException.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/search/SearchException.java
+END
+SearchService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/search/SearchService.java
+END
+SearchHit.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/jlibrary/!svn/ver/526/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/search/SearchHit.java
+END

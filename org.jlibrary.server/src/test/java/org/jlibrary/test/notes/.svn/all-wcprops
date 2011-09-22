@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/notes
+END
+DeleteNoteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/notes/DeleteNoteTest.java
+END
+AbstractNoteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/notes/AbstractNoteTest.java
+END
+CreateNoteTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/notes/CreateNoteTest.java
+END

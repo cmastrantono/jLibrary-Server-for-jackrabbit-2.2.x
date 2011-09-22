@@ -1,0 +1,20 @@
+package org.jlibrary.core.jcr;
+
+public class SessionEntry {
+
+	private long lastUsed;
+	private javax.jcr.Session session;
+	
+	public long getLastUsed() {
+		return lastUsed;
+	}
+	public void setLastUsed(long lastUsed) {
+		this.lastUsed = lastUsed;
+	}
+	public javax.jcr.Session getSession() {
+		return session;
+	}
+	public void setSession(javax.jcr.Session session) {
+		this.session = session;
+	}
+}

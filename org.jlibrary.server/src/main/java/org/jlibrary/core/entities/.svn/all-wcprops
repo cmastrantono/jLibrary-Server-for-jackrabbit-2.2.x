@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/jlibrary/!svn/ver/712/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities
+END
+CategoryNodeInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/CategoryNodeInfo.java
+END
+IResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/IResource.java
+END
+Author.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Author.java
+END
+Types.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/623/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Types.java
+END
+SearchResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/jlibrary/!svn/ver/567/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/SearchResult.java
+END
+Directory.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Directory.java
+END
+Restriction.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Restriction.java
+END
+RepositoryConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/RepositoryConfig.java
+END
+Note.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Note.java
+END
+Bookmark.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Bookmark.java
+END
+Member.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Member.java
+END
+Relation.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Relation.java
+END
+Category.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Category.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/jlibrary/!svn/ver/688/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/User.java
+END
+Document.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/712/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Document.java
+END
+Favorite.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Favorite.java
+END
+DocumentMetaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/DocumentMetaData.java
+END
+Repository.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Repository.java
+END
+FileType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/FileType.java
+END
+CategoryNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/CategoryNode.java
+END
+Ticket.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Ticket.java
+END
+DocumentVersion.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/DocumentVersion.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Node.java
+END
+ServerProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/ServerProfile.java
+END
+Lock.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Lock.java
+END
+RepositoryInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/RepositoryInfo.java
+END
+Group.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Group.java
+END
+Rol.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/jlibrary/!svn/ver/708/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Rol.java
+END
+Credentials.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/Credentials.java
+END
+ResourceNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/entities/ResourceNode.java
+END

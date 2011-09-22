@@ -1,0 +1,105 @@
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<nt = 'http://www.jcp.org/jcr/nt/1.0'> 
+<jlib = 'http://jlibrary.sourceforge.net'> 
+<jcg = 'http://www.javaconganas.com'> 
+
+[jlib:jlibrary] > nt:base mixin orderable
++ jlib:jlibrary
+- jlib:name 
+- jlib:active (boolean) =true mandatory autocreated
+
+[jlib:internal] > jlib:jlibrary mixin
+- * (*)
++ * 
+multiple
+
+[jlib:node] > jlib:jlibrary mixin orderable
+- jlib:description mandatory
+- jlib:creator mandatory
+- jlib:importance (long) mandatory
+- jlib:created (date) mandatory
+- jlib:path mandatory
+- jlib:position (long) mandatory
+- jlib:typecode (long) mandatory
+- jlib:size (long) mandatory
+- jlib:restrictions (reference) mandatory multiple
+- jlib:lock
+- jlib:lockUser
+- mix:lockToken
+
+[jlib:content] > jlib:jlibrary mixin
+
+[jlib:note] > jlib:jlibrary
+-jlib:date (date) mandatory
+-jlib:text mandatory
+-jlib:user
+
+[jlib:document] > jlib:node mixin orderable
++jlib:content multiple
++jlib:note multiple
+-jlib:author (reference) mandatory
+-jlib:language mandatory
+-jlib:keywords mandatory
+-jlib:creationDate (date) mandatory
+-jlib:url
+-jlib:title mandatory
+-jlib:categories (reference) mandatory multiple
+-jlib:resources (reference) mandatory multiple
+-jlib:relations (reference) mandatory multiple
+-jcg:wikiEntry
+
+[jlib:resource] > jlib:node mixin orderable
+
+[jlib:directory] > jlib:node mixin orderable
++jlib:directory multiple
++jlib:document multiple
++jlib:resource multiple
+
+[jlib:favorite] > jlib:jlibrary
+-jlib:user (reference)
+-jlib:node (reference) mandatory
+
+[jlib:favorites] > jlib:jlibrary
+
+[jlib:category] > jlib:jlibrary mixin orderable
++jlib:category multiple
++jlib:favorites multiple
+-jlib:nodes (reference) mandatory multiple
+-jlib:date (date) mandatory
+-jlib:description mandatory
+
+[jlib:bookmark] > jlib:jlibrary mixin orderable
+-jlib:typecode mandatory
+-jlib:url
+-jlib:user mandatory
+-jlib:description mandatory
++jlib:bookmark multiple
+
+[jlib:bookmarks] > jlib:jlibrary mixin orderable
+
+[jlib:user] > jlib:jlibrary mixin orderable
++jlib:bookmarks
+-jlib:groups (reference) mandatory multiple
+-jlib:roles (reference) mandatory multiple
+-jlib:firstname
+-jlib:lastname
+-jlib:email
+-jlib:password
+-jlib:isAdmin (boolean)
+-jlib:sysAdmin (boolean)
+
+[jlib:group] > jlib:jlibrary
+-jlib:users (reference) mandatory multiple
+-jlib:roles (reference) mandatory multiple
+-jlib:description mandatory
+
+
+[jlib:rol] > jlib:jlibrary
+-jlib:members (reference) mandatory multiple
+-jlib:description mandatory
+
+[jlib:author] > jlib:jlibrary
+-jlib:bio mandatory
+-jlib:user
+
+

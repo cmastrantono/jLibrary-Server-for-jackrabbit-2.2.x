@@ -1,0 +1,7 @@
+Scalability improve: updateCategory receives node ids and not node objects
+Added active state to authors
+updateBookmark method now returns bookmark
+Favorite bug in equals method, wrong instanceof
+Favorite now adds the category when returning it from JCRAdapter
+New methods for updating binary content in resources and documents through streaming
+Added a check to updateRepository so config properties aren´t mandatory anymore

@@ -1,0 +1,40 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/main/java/org/jlibrary/core/jcr/webdav
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2007-01-05T20:47:51.482830Z
+46
+perez_martin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+ActiveNodeFilter.java
+file
+
+
+
+
+2008-02-26T15:06:54.109375Z
+b4affe93f4addc8e396a214d88e9d5d9
+2007-01-05T20:47:51.482830Z
+46
+perez_martin
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/jlibrary/!svn/ver/836/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/properties
+END
+CreateCustomPropertyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/jlibrary/!svn/ver/432/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/properties/CreateCustomPropertyTest.java
+END
+AbstractPropertyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/jlibrary/!svn/ver/836/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/properties/AbstractPropertyTest.java
+END
+RemoveCustomPropertyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/jlibrary/!svn/ver/418/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test/properties/RemoveCustomPropertyTest.java
+END

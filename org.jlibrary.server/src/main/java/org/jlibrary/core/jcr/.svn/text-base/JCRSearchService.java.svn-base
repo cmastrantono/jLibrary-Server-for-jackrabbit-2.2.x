@@ -1,0 +1,215 @@
+/*
+* jLibrary, Open Source Document Management System
+* 
+* Copyright (c) 2003-2006, Martín Pérez Mariñán, and individual 
+* contributors as indicated by the @authors tag. See copyright.txt in the
+* distribution for a full listing of individual contributors.
+* All rights reserved.
+* 
+* This is free software; you can redistribute it and/or modify it
+* under the terms of the Modified BSD License as published by the Free 
+* Software Foundation.
+* 
+* This software is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified
+* BSD License for more details.
+* 
+* You should have received a copy of the Modified BSD License along with 
+* this software; if not, write to the Free Software Foundation, Inc., 
+* 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA, or see the
+* FSF site: http://www.fsf.org.
+*/
+package org.jlibrary.core.jcr;
+
+import java.util.Collection;
+import java.util.Set;
+import java.util.TreeSet;
+
+import javax.jcr.ItemNotFoundException;
+import javax.jcr.NodeIterator;
+import javax.jcr.Session;
+import javax.jcr.Value;
+import javax.jcr.Workspace;
+import javax.jcr.query.InvalidQueryException;
+import javax.jcr.query.QueryManager;
+import javax.jcr.query.QueryResult;
+import javax.jcr.query.RowIterator;
+
+import org.apache.commons.lang.StringUtils;
+import org.jlibrary.core.entities.SearchResult;
+import org.jlibrary.core.entities.Ticket;
+import org.jlibrary.core.repository.exception.RepositoryException;
+import org.jlibrary.core.search.SearchException;
+import org.jlibrary.core.search.SearchHit;
+import org.jlibrary.core.search.SearchService;
+import org.jlibrary.core.search.algorithms.DefaultSearchAlgorithm;
+import org.jlibrary.core.search.algorithms.SearchAlgorithm;
+import org.jlibrary.core.security.SecurityException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * This is the JCR based SearchService implementation. It uses the default 
+ * search algorithm implementation.
+ * 
+ * @author mpermar
+ *
+ */
+public class JCRSearchService implements SearchService {
+	
+	static Logger logger = LoggerFactory.getLogger(JCRSearchService.class);
+	
+	public static final int NO_PAGING=-1;
+	
+	public JCRSearchService() {}
+	
+	private SearchAlgorithm searchAlgorithm = new DefaultSearchAlgorithm();
+	
+	//TODO: Test and improve XPath queries
+	public Collection search(Ticket ticket, 
+							 String phrase, 
+							 String searchType) throws SearchException {
+
+		return search(ticket,phrase,searchType,NO_PAGING,NO_PAGING).getItems();
+	}
+	
+	//TODO: Test and improve XPath queries
+	public SearchResult search(Ticket ticket, 
+							   String phrase, 
+							   String searchType,
+							   int init,
+							   int end) throws SearchException {
+		
+
+		String query = null;
+		if (searchType.equals(SearchService.SEARCH_KEYWORDS)) {
+			query = "//element(*,nt:file)[jcr:contains(@jlib:keywords,'" +
+				    phrase +
+				    "') and @jlib:active='true']";
+		} else if (searchType.equals(SearchService.SEARCH_CONTENT)) {
+			query = "//element(*,nt:resource)[jcr:contains(.,'" +
+					phrase + 
+					"') and @jlib:active='true']/(@jlib:description|rep:excerpt(.))";
+		}		
+
+		javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+		if (session == null) {
+			throw new SearchException("Session has expired. Please log in again.");
+		}
+		
+		return search(ticket,session,query,init,end);		
+	}
+	
+	public Collection search(Ticket ticket, 
+			 				 String xpathQuery) throws SearchException {
+
+		return search(ticket,xpathQuery,NO_PAGING,NO_PAGING).getItems();		
+	}
+	
+	public SearchResult search(Ticket ticket, 
+			 				   String xpathQuery,
+			 				   int init,
+			 				   int end) throws SearchException {
+
+		String query = "//element(*,nt:file)" + xpathQuery; 
+		
+		javax.jcr.Session session = SessionManager.getInstance().getSession(ticket);
+		if (session == null) {
+			throw new SearchException("Session has expired. Please log in again.");
+		}
+
+		return search(ticket,session,query,init,end);
+	}	
+	
+	private SearchResult search(Ticket ticket,
+							  	javax.jcr.Session session, 
+							  	String strQuery,
+							  	int init,
+							  	int end) throws SearchException {
+
+		Set results = new TreeSet();
+		SearchResult result = new SearchResult();
+		result.setItems(results);
+		result.setInit(init);
+		result.setEnd(end);
+		try {
+			Workspace workspace = session.getWorkspace();
+			QueryManager queryManager = workspace.getQueryManager();
+			javax.jcr.Node rootNode = JCRUtils.getRootNode(session);
+			String rootPath = rootNode.getPath();
+			
+			String statement = "/jcr:root" + rootPath + strQuery;
+			
+
+			javax.jcr.query.Query query = 
+				queryManager.createQuery(statement,javax.jcr.query.Query.XPATH);
+			QueryResult queryResult = query.execute();
+			result.setSize(queryResult.getNodes().getSize());
+			
+			RowIterator it = queryResult.getRows();
+			NodeIterator nodeIterator = queryResult.getNodes();
+			if (init != NO_PAGING) {
+				it.skip(init);
+				nodeIterator.skip(init);
+			}
+			while (it.hasNext()) {
+				if (init != NO_PAGING && end != NO_PAGING) {					
+					if (init>end) {
+						break;
+					}
+					init++;
+				}
+				javax.jcr.query.Row row = (javax.jcr.query.Row) it.nextRow();
+				String textExcerpt = "";
+				try {
+					Value excerpt = row.getValue("rep:excerpt()");
+					textExcerpt = excerpt.getString();
+				} catch (Exception e) {
+					logger.warn("Exception getting excerpt: " + e.getMessage());
+				}
+				javax.jcr.Node node = (javax.jcr.Node)nodeIterator.nextNode();
+				if (node.isNodeType("nt:frozenNode")) continue;
+				if (node.isNodeType(JLibraryConstants.CONTENT_MIXIN)) {
+					node = node.getParent();
+				}
+				try {
+					if (!JCRSecurityService.canRead(node,
+									  				ticket.getUser().getId())) {
+						continue;
+					}
+				} catch (SecurityException se) {
+					logger.error(se.getMessage(),se);
+					continue;
+				}
+				double score = row.getValue(JCRConstants.JCR_SCORE).getDouble();
+
+				SearchHit sh = new SearchHit();
+				sh.setRepository(ticket.getRepositoryId());
+				sh.setId(node.getUUID());
+				sh.setName(node.getProperty(
+						JLibraryConstants.JLIBRARY_NAME).getString());
+				String path = StringUtils.difference("/" + 
+						JLibraryConstants.JLIBRARY_ROOT, node.getPath());				
+				sh.setPath(path);
+				sh.setImportance(new Integer((int)node.getProperty(
+						JLibraryConstants.JLIBRARY_IMPORTANCE).getLong()));
+				sh.setExcerpt(textExcerpt);
+				
+				sh.setScore(score/1000);
+				results.add(sh);
+			}
+			
+			//TODO: Allow for plugabble search algorithms
+			results = searchAlgorithm.filterSearchResults(results);
+		} catch (InvalidQueryException iqe) {
+			logger.error(iqe.getMessage());
+			return result;
+		} catch (javax.jcr.RepositoryException e) {
+			logger.error(e.getMessage(),e);
+			throw new SearchException(e);
+		}
+
+		return result;
+	}	
+}

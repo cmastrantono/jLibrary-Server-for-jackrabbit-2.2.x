@@ -1,0 +1,154 @@
+8
+
+dir
+846
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary/trunk/org.jlibrary.server/src/test/java/org/jlibrary/test
+https://jlibrary.svn.sourceforge.net/svnroot/jlibrary
+
+
+
+2008-01-20T17:38:27.840928Z
+836
+usultis
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+95db9afd-4a25-0410-8010-bfe18eb39bfe
+
+export
+dir
+
+CreateRepositoryTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.250000Z
+ebabc8a81d0c1758f9d6587a0f2bca9f
+2007-01-05T19:28:16.860454Z
+26
+perez_martin
+
+profiles
+dir
+
+AbstractRepositoryTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.281250Z
+4ec8e920c206aaf8ae96c64324223e1d
+2007-04-28T10:58:40.640075Z
+241
+perez_martin
+
+authors
+dir
+
+categories
+dir
+
+locking
+dir
+
+bookmarks
+dir
+
+notes
+dir
+
+LoginTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.312500Z
+1ce82d728ac204171095b92290495b47
+2007-06-13T20:38:59.623205Z
+343
+perez_martin
+
+properties
+dir
+
+relations
+dir
+
+favorites
+dir
+
+search
+dir
+
+security
+dir
+
+JLibraryTestSuite.java
+file
+
+
+
+
+2008-02-26T15:06:42.359375Z
+8b748e2a344b87d910356e9d67b53cae
+2007-04-28T11:05:50.090183Z
+247
+perez_martin
+
+FindRepositoriesTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.390625Z
+7f10ac10a9ffd10a7c444e26d8ccb7a0
+2007-04-28T10:58:40.640075Z
+241
+perez_martin
+
+DisconnectTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.421875Z
+1ac98e7669affac31b7b10556ba42f4c
+2007-01-05T19:28:16.860454Z
+26
+perez_martin
+
+content
+dir
+
+util
+dir
+
+RemoveRepositoryTest.java
+file
+
+
+
+
+2008-02-26T15:06:42.437500Z
+2f51d4d79d6d496c6a5d157a5f6d21ce
+2007-01-05T22:48:40.811738Z
+56
+perez_martin
+

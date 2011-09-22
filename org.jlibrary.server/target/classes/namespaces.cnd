@@ -1,0 +1,9 @@
+# This file defines the different namespaces supported in this jLibrary installation. 
+#
+# You can add your own namespaces here. Afterwards, you can define your own nodetypes 
+# using this namespaces in the jlibrary.cnd file
+#
+
+jlib=http://jlibrary.sourceforge.net
+jlib-ext=http://jlibrary.sourceforge.net/ext
+jcg=http://www.javaconganas.com
